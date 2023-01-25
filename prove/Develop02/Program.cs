@@ -17,6 +17,7 @@ class Program
         choosePrompt._prompts.Add(choosePrompt._prompt5);
 
         // Begin user experenice/Load or New Journal
+        Console.WriteLine("");
         Console.WriteLine("Welcome to the Journal Program");
         Console.Write("Would you like to load an exsisting ");
         Console.Write("journal (L) or begin a new (N) one? ");
