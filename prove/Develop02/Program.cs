@@ -18,7 +18,7 @@ class Program
 
         // Begin user experenice/Load or New Journal
         Console.WriteLine("");
-        Console.WriteLine("Welcome to the Journal Program");
+        Console.WriteLine("Welcome to the Journal Program!");
         Console.Write("Would you like to load an exsisting ");
         Console.Write("journal (L) or begin a new (N) one? ");
         string loadStart = Console.ReadLine();
@@ -115,11 +115,24 @@ class Program
             // End Program
             else if (menuOption == 5)
             {
-                theJournal.SaveFile();
-                
-                Console.WriteLine("");
-                Console.WriteLine("Thank you for using Journal!");
-                Console.WriteLine("");
+                string saveExit = "";
+                Console.Write("Would you like to save your journal first? Y/N ");
+                saveExit = Console.ReadLine();
+
+                if (saveExit == "Y")
+                {
+                    theJournal.SaveFile();
+                    Console.WriteLine("");
+                    Console.WriteLine("Thank you for using Journal Program!");
+                    Console.WriteLine("");
+                }
+
+                else
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Thank you for using Journal Program!");
+                    Console.WriteLine("");
+                }
             }
 
             // Invalid Option Error Message
