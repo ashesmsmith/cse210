@@ -11,6 +11,7 @@ public class Prompt
     public string _prompt3 = "If I could do over today, what would would I change?";
     public string _prompt4 = "What did I do for someone else today?";
     public string _prompt5 = "What is a miracle I recognized today?";
+    
     public List<string> _prompts = new List<string>();
 
     public string DisplayPrompt()
