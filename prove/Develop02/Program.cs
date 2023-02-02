@@ -5,16 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Open the journal and leave it open for the whole session
+        // Open the journal and leave it open for the whole session
         Journal theJournal = new Journal();
-
-        // Add prompts to list
-        Prompt choosePrompt = new Prompt();
-        choosePrompt._prompts.Add(choosePrompt._prompt1);
-        choosePrompt._prompts.Add(choosePrompt._prompt2);
-        choosePrompt._prompts.Add(choosePrompt._prompt3);
-        choosePrompt._prompts.Add(choosePrompt._prompt4);
-        choosePrompt._prompts.Add(choosePrompt._prompt5);
+        
 
         // Begin user experenice/Load or New Journal
         Console.WriteLine("");
@@ -58,6 +51,8 @@ class Program
                 Console.WriteLine("");
 
                 Entry newEntry = new Entry();
+                Prompt choosePrompt = new Prompt();
+
                 // Prompt
                 newEntry._prompt = choosePrompt.DisplayPrompt();
                 Console.WriteLine(newEntry._prompt);
@@ -68,7 +63,7 @@ class Program
                 DateTime currentTime = DateTime.Now;
                 newEntry._date = currentTime.ToShortDateString();
 
-                // Add entry to the list
+                // Add entry to list
                 theJournal._entries.Add(newEntry);
             }
 
@@ -78,7 +73,7 @@ class Program
                 theJournal.DisplayJournal();
             }
 
-            // Prompt user for a filename to save journal
+            // Save to filename currently in use
             else if (menuOption == 3)
             {
                theJournal.SaveFile();
@@ -86,8 +81,8 @@ class Program
                Console.WriteLine("The journal has been saved.");
             }
 
-            // Save current file and prompt user for a filename 
-            // to load a different journal
+            // Save current file and prompt user for a new 
+            // filename to load a different journal
             else if (menuOption == 4)
             {
                Console.Write("Would you like to save changes and load a new journal? (Y/N) ");
@@ -100,25 +95,28 @@ class Program
                 Console.WriteLine("The journal has been saved.");
                 Console.WriteLine("");
 
-                // Clear all previous entries before loading new
+                // Clear all previous entries before loading new file
                 theJournal._entries.Clear();
 
-                // Load new file
+                // Prompt for new filename and load file
                 Console.Write("Please enter the filename of the journal to LOAD: ");
                 theJournal._journalFile = Console.ReadLine();
                 theJournal.LoadFile();
                }
 
+               // Go back to Menu Options
                else {}
             }
 
             // End Program
             else if (menuOption == 5)
             {
+                // Prompt user for save option
                 string saveExit = "";
                 Console.Write("Would you like to save your journal first? Y/N ");
                 saveExit = Console.ReadLine();
 
+                // Save current file
                 if (saveExit == "Y")
                 {
                     theJournal.SaveFile();
@@ -127,6 +125,7 @@ class Program
                     Console.WriteLine("");
                 }
 
+                // End program without saving
                 else
                 {
                     Console.WriteLine("");
