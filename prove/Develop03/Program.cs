@@ -12,18 +12,20 @@ class Program
 
         // Startup - Display reference with full text
         Console.WriteLine("");
+        Console.WriteLine("Welcome to the Scripture Memorizer Program!");
+        Console.WriteLine("");
         scripture.Display();
 
         // BEGIN USER INTERACTION
         string userSelect = "";
         int max = scripture.Max();
-        int total = -1; // max starts at 0
+        int total = -1; // max count starts at 0
 
         while (userSelect != "QUIT")
         {
             Console.Write("Please press ENTER to continue or type QUIT to end. ");
             userSelect = Console.ReadLine();
-            total = total + 3; // +3 -3 words hidden at a time
+            total = total + 3; // +3 because 3 words hidden at a time
 
             if (userSelect == "" && total < max)
             {
