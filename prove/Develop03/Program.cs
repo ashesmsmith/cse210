@@ -5,10 +5,11 @@ class Program
     static void Main(string[] args)
     {
         // SETUP
+        Reference reference = new Reference("Proverbs", 3, 5, 6);
         Scripture scripture = new Scripture("Trust in the Lord with all thine heart; " +
         "and lean not unto thine own understanding. " + "In all thy ways " +
         "acknowledge him, and he shall direct thy paths.");
-        scripture.SetReference();
+        scripture.SetReference(reference);
 
         // Startup - Display reference with full text
         Console.WriteLine("");
@@ -21,7 +22,7 @@ class Program
         int max = scripture.Max();
         int total = -1; // max count starts at 0
 
-        while (userSelect != "QUIT")
+        while (userSelect.ToUpper() != "QUIT")
         {
             Console.Write("Please press ENTER to continue or type QUIT to end. ");
             userSelect = Console.ReadLine();
@@ -41,7 +42,7 @@ class Program
                 userSelect = "QUIT";
             }
 
-            else if (userSelect != "QUIT")
+            else if (userSelect.ToUpper() != "QUIT")
             {
                 Console.WriteLine("");
                 Console.WriteLine("Invalid Option. Please try again.");

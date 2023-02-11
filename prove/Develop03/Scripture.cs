@@ -6,7 +6,8 @@ using System.Collections.Generic;
 class Scripture
 {
     // ATTRIBUES
-    private string _reference;
+    // private string _reference;
+    private Reference _reference;
     private List<Word> _verseWords;
 
     // CONSTRUCTOR
@@ -23,15 +24,14 @@ class Scripture
     }
 
     // METHODS
-    public void SetReference()
+    public void SetReference(Reference reference)
     {
-        Reference setReference = new Reference("Proverbs", 3, 5, 6);
-        _reference = setReference.DisplayReference();
+        _reference = reference;
     }
 
     public void Display()
     {
-        Console.WriteLine(_reference);
+        Console.WriteLine(_reference.DisplayReference());
 
         string verse = "";
         foreach (Word word in _verseWords)
