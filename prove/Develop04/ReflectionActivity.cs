@@ -46,9 +46,10 @@ public class ReflectionActivity : Activity
         Console.WriteLine("");
         Console.WriteLine($"--- {GetReflectPrompt()} ---");
         Console.WriteLine("");
-        Console.Write("When you have something in mind, press ENTER to continue");
+        Console.Write("When you have something in mind, press ENTER to continue. ");
         Console.ReadLine();
 
+        Console.WriteLine("");
         Console.WriteLine("Now ponder on each of the following questions " +
         "as they related to this experience.");
 

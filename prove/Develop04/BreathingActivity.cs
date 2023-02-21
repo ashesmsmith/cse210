@@ -22,6 +22,7 @@ public class BreathingActivity : Activity
 
         while (current < end)
         {
+            Console.WriteLine("");
             Console.Write($"Breathe in...4");
             for (int i=3; i>-1; i=i-1)
             {
@@ -29,8 +30,8 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
                 Console.Write($"{i}");
             }
-            Console.WriteLine("");
 
+            Console.WriteLine("");
             Console.Write($"Breathe out...6");
             for (int i=5; i>-1; i=i-1)
             {
@@ -38,7 +39,6 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
                 Console.Write($"{i}");
             }
-            Console.WriteLine("");
 
             current = DateTime.Now; // Reset current time
             Console.WriteLine("");

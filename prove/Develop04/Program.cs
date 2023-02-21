@@ -26,13 +26,8 @@ class Program
                 "and focus on your breathing.");
 
                 breathing.DisplayStart();
-
-                Console.Clear();
-                Console.WriteLine("Get Ready...");
                 breathing.Spinner();
                 breathing.DisplayBreathing();
-
-                Console.WriteLine("");
                 breathing.DisplayEnd();
             }
 
@@ -45,13 +40,8 @@ class Program
                 "how you can use it in other aspects of your life.");
 
                 reflection.DisplayStart();
-
-                Console.Clear();
-                Console.WriteLine("Get Ready...");
                 reflection.Spinner();
                 reflection.DisplayReflection();
-
-                Console.WriteLine("");
                 reflection.DisplayEnd();
             }
 
@@ -63,16 +53,9 @@ class Program
                 "can in a certain area.");
 
                 listing.DisplayStart();
-
-                Console.Clear();
-                Console.WriteLine("Get Ready...");
                 listing.Spinner();
                 listing.DisplayListing();
-                
-                Console.WriteLine();
                 listing.DisplayListEnd();
-
-                Console.WriteLine("");
                 listing.DisplayEnd();
             }
 

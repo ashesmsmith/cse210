@@ -26,7 +26,9 @@ public class ListingActivity : Activity
     public void DisplayListing()
     {
         Console.WriteLine("List as many responses as you can to the following prompt:");
+        Console.WriteLine("");
         Console.WriteLine($"--- {GetListPrompt()} ---");
+        Console.WriteLine("");
         Console.Write("You may begin in: 5");
         for (int i=4; i>-1; i=i-1)
         {
@@ -34,6 +36,8 @@ public class ListingActivity : Activity
             Console.Write("\b \b");
             Console.Write($"{i}");
         }
+
+        Console.WriteLine("");
 
         // Start accepting answers from user
         DateTime start = DateTime.Now;
@@ -60,6 +64,7 @@ public class ListingActivity : Activity
 
     public void DisplayListEnd()
     {
+        Console.WriteLine("");
         Console.WriteLine($"You listed {_totalAnswers} items!");
     }
 }

@@ -27,6 +27,10 @@ public class Activity
         Console.WriteLine("");  
 
         SetDuration();
+
+        Console.Clear();
+        Console.Write("Get Ready...");
+        Console.WriteLine("");
     }
 
     public void SetDuration() // Set the desired duration for the activity in seconds
@@ -63,6 +67,7 @@ public class Activity
 
     public void DisplayEnd()
     {
+        Console.WriteLine("");
         Console.WriteLine("Well Done!");
         Spinner();
 
