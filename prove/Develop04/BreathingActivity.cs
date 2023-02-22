@@ -16,8 +16,11 @@ public class BreathingActivity : Activity
     // METHODS
     public void DisplayBreathing()
     {
+        DisplayStart();
+        Spinner();
+
         DateTime start = DateTime.Now;
-        DateTime end = start.AddSeconds(_durationDesired);
+        DateTime end = start.AddSeconds(_duration);
         DateTime current = DateTime.Now;
 
         while (current < end)
@@ -43,5 +46,7 @@ public class BreathingActivity : Activity
             current = DateTime.Now; // Reset current time
             Console.WriteLine("");
         }
+
+        DisplayEnd();
     }
 }

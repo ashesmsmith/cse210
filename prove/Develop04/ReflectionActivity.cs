@@ -35,9 +35,14 @@ public class ReflectionActivity : Activity
     // METHODS
     public void DisplayReflection()
     {
+        DisplayStart();
+        Spinner();
+
         DisplayPrompt();
         Console.Clear();
         DisplayQuestions();
+
+        DisplayEnd();
     }
 
     public void DisplayPrompt()
@@ -65,7 +70,7 @@ public class ReflectionActivity : Activity
     public void DisplayQuestions() // CURRENTLY DISPLAYING DUPLICATE QUESTIONS
     {
         DateTime start = DateTime.Now;
-        DateTime end = start.AddSeconds(_durationDesired);
+        DateTime end = start.AddSeconds(_duration);
         DateTime current = DateTime.Now;
 
         while (current < end)
@@ -93,104 +98,3 @@ public class ReflectionActivity : Activity
         return (_questions[index]);
     } 
 }
-
-
-
-// NOT USING - BROKEN - DIDN'T WORK
-
-    //  private string _question;
-    //  private bool _used = false; // Default - question has not been asked
-
-    // public void SetQuestion() // DUPLICATE PROMPTS RETURNED
-    // {
-    //     int index = 0;
-    //     string end = Continue();
-
-    //     do
-    //     {
-    //         Random random = new Random();
-    //         index = random.Next(_questions.Count);
-    //         end = Continue();
-
-    //         if (end == "STOP") // Question has been asked. Pick again.
-    //         {
-    //             break;
-    //         } 
-
-    //     } while (_questions[index].GetUsed());      
-
-    //     if (end != "STOP")
-    //     {
-    //         string question = _questions[index];
-    //     }
-
-    // }
-
-
-    // public void SetUsed()
-    // {
-    //     _used = true;
-    // }
-    
-
-    // public bool GetUsed()
-    // {
-    //     return _used;
-    // }
-
-
-    // public string Continue() // If the question has been asked return "STOP"
-    // {
-    //     string end = "STOP";
-
-    //     foreach (string question in _questions)
-    //     {
-    //         if (GetUsed() == false) // Question has not been asked
-    //         {
-    //             end = "";
-    //         }
-    //     }
-
-    //     return end;
-    // }
-
-
-    // public void SetQuestion()
-    // {
-    //     Random random = new Random();
-    //     int index = random.Next(_questions.Count);
-
-    //     _question = _questions[index];
-
-    //     if (_used == false)
-    //     {
-    //         _used = true;
-    //     }
-
-    //     else
-    //     {
-    //         SetQuestion();
-    //     }
-    // }
-
-
-    // public void DisplayReflection() // DISPLAYING DUPLICATE QUESTIONS
-    // {
-    //     Console.WriteLine(GetReflectPrompt());
-    //     Console.WriteLine("");
-    //     Thread.Sleep(5000);
-
-    //     DateTime start = DateTime.Now;
-    //     DateTime end = start.AddSeconds(_durationDesired);
-    //     DateTime current = DateTime.Now;
-
-    //     while (current < end)
-    //     {
-    //         SetQuestion();
-    //         Console.WriteLine(_question);
-    //         Spinner();
-    //         Console.WriteLine("");
-
-    //         current = DateTime.Now;
-    //     }
-    // }

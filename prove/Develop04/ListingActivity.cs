@@ -25,6 +25,9 @@ public class ListingActivity : Activity
     // METHODS
     public void DisplayListing()
     {
+        DisplayStart();
+        Spinner();
+
         Console.WriteLine("List as many responses as you can to the following prompt:");
         Console.WriteLine("");
         Console.WriteLine($"--- {GetListPrompt()} ---");
@@ -41,7 +44,7 @@ public class ListingActivity : Activity
 
         // Start accepting answers from user
         DateTime start = DateTime.Now;
-        DateTime end = start.AddSeconds(_durationDesired);
+        DateTime end = start.AddSeconds(_duration);
         DateTime current = DateTime.Now;
 
         while (current < end)
@@ -52,6 +55,9 @@ public class ListingActivity : Activity
             Console.ReadLine();
             _totalAnswers += 1;
         }
+
+        DisplayListEnd();
+        DisplayEnd();
     }
 
     public string GetListPrompt()

@@ -8,7 +8,7 @@ public class Activity
     //ATTRIBUTES
     private string _activityName;
     private string _description;
-    protected int _durationDesired;
+    protected int _duration;
 
     // CONSTRUCTORS
     public Activity(string activity, string description)
@@ -38,7 +38,7 @@ public class Activity
         Console.Write("How long, in seconds, would yo like for your session? ");
         int duration = int.Parse(Console.ReadLine());
 
-        _durationDesired = duration;
+        _duration = duration;
     }
 
     public void Spinner()
@@ -58,6 +58,9 @@ public class Activity
             Console.Write("/");
             Thread.Sleep(500);
             Console.Write("\b \b");
+            Console.Write("-");
+            Thread.Sleep(500);
+            Console.Write("\b \b");
 
             current = DateTime.Now;
         }
@@ -71,7 +74,7 @@ public class Activity
         Console.WriteLine("Well Done!");
         Spinner();
 
-        Console.WriteLine($"You have completed {_durationDesired} seconds of the {_activityName}.");
+        Console.WriteLine($"You have completed {_duration} seconds of the {_activityName}.");
         Spinner();
     }
 }
