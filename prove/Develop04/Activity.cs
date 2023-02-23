@@ -50,16 +50,16 @@ public class Activity
         while (current < end)
         {
             Console.Write("\\");
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Console.Write("\b \b");
             Console.Write("|");
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Console.Write("\b \b");
             Console.Write("/");
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Console.Write("\b \b");
-            Console.Write("-");
-            Thread.Sleep(500);
+            Console.Write("─");
+            Thread.Sleep(300);
             Console.Write("\b \b");
 
             current = DateTime.Now;

@@ -6,14 +6,15 @@ class Program
     {
         int option = 0;
 
-        while (option != 4)
+        while (option != 5)
         {
             Console.Clear();
             Console.WriteLine("Mindfulness Activity Options:");
             Console.WriteLine("    1. Breathing Activity");
             Console.WriteLine("    2. Reflection Activity");
             Console.WriteLine("    3. Listing Activity");
-            Console.WriteLine("    4. Quit");
+            Console.WriteLine("    4. Grounding Activity");
+            Console.WriteLine("    5. Quit");
             Console.Write("Select a choice from the menu: ");
             option = int.Parse(Console.ReadLine());
             Console.Clear();
@@ -46,7 +47,14 @@ class Program
                 listing.DisplayListing();
             }
 
-            else if (option != 4) // Error Message
+            else if (option == 4) // Grounding Activity
+            {
+                GroundingActivity grounding = new GroundingActivity("Grounding Activity",
+                "This activity will help you relax during an anxiety or panic attack.");
+                grounding.DisplayGrounding();
+            }
+
+            else if (option != 5) // Error Message
             {
                 Console.WriteLine("Invalid Option. Please try again.");
             }

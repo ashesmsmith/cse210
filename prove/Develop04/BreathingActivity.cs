@@ -6,6 +6,7 @@ using System;
 public class BreathingActivity : Activity
 {
     // ATTRIBUTES
+    // No additional attributes needed
 
     // CONSTRUCTORS
     public BreathingActivity(string activity, string description): base (activity, description)
