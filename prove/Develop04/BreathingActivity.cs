@@ -34,6 +34,7 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
                 Console.Write($"{i}");
             }
+            Console.Write("\b \b");
 
             Console.WriteLine("");
             Console.Write($"Breathe out...6");
@@ -43,6 +44,7 @@ public class BreathingActivity : Activity
                 Console.Write("\b \b");
                 Console.Write($"{i}");
             }
+            Console.Write("\b \b");
 
             current = DateTime.Now; // Reset current time
             Console.WriteLine("");
