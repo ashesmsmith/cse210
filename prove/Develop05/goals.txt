@@ -1,0 +1,3 @@
+SimpleGoal:SimpleTest|testing simple goal|10|True
+EternalGoal:EternalTest|testing eternal goal|20|1
+ChecklistGoal:ChecklistTest|testing checklist goal|30|1|5|100
