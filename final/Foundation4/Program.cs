@@ -21,7 +21,7 @@ class Program
 
 
         // Display the summary for each activity
-        Console.WriteLine();
+        Console.WriteLine("");
         
         foreach (Activity activity in _activities)
         {
